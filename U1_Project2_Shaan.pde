@@ -1,11 +1,10 @@
-int screen;
 int currentQuestion;
 
 
 
 void setup()
 {
-size(500,500);  
+size(800,800);  
 background(0);
   
 }  
@@ -13,30 +12,34 @@ background(0);
 
 void draw()
 {
+background(0);
+
+if (currentQuestion == 0)
+{
   homePage();
+} 
  
- 
- if (currentQuestion == 1);
+ else if (currentQuestion == 1)
  {
    Question1();
  }
  
-  if (currentQuestion == 2);
+ else if (currentQuestion == 2)
  {
    Question2();
  }
  
-  if (currentQuestion == 3);
+ else if (currentQuestion == 3)
  {
    Question3();
  }
  
- if (currentQuestion == 4);
+ else if (currentQuestion == 4)
  {
    Question4();
  }
  
- if (currentQuestion == 5);
+ else if (currentQuestion == 5)
  {
    Question5();
  }
@@ -50,8 +53,8 @@ void homePage()
   background(0);
   
   fill(255);
-  textSize(20);
-  text("Click anywhere to start", width/2, height/2);
+  textSize(30);
+  text("Click anywhere to start", 240, 380);
   
   if (mousePressed)
   {
@@ -118,41 +121,49 @@ void Button(String text, char option)
 {
   if (option == 'a')
   {
-  fill(0,0,255);
-    textSize(30);
-    text(text, 70, 155);
-    
     fill(0,255,0);
-    rect(50, 110, 400, 75);
+    rect(75, 160, 640, 120);
+    
+    fill(0,0,255);
+    textSize(40);
+    text(text, 300, 230);
   }  
   
   if (option == 'b')
   {
-    fill(0,0,255);
-    textSize(30);
-    text(text, 70, 255);
-    
     fill(0,255,0);
-    rect(50, 210, 400, 75);
+    rect(75, 300, 640, 120);
+    
+    fill(0,0,255);
+    textSize(40);
+    text(text, 300, 375);
   }
   
   if (option == 'c')
   {
-    fill(0,0,255);
-    textSize(30);
-    text(text, 70, 355);
-    
     fill(0,255,0);
-    rect(50, 310, 400, 75);
+    rect(75, 440, 640, 120);
+    
+    fill(0,0,255);
+    textSize(40);
+    text(text, 300, 520);
   }
   
   if (option == 'd')
   {
-    fill(0,0,255);
-    textSize(30);
-    text(text, 70, 455);
-    
     fill(0,255,0);
-    rect(50, 310, 400, 75);
+    rect(75, 580, 640, 120);
+    
+    fill(0,0,255);
+    textSize(40);
+    text(text, 300, 665);
   }
 }
+
+void keyPressed()
+{
+   if (mousePressed && mouseX>125 && mouseX<665 && mouseY>150 && mouseY<270)
+  {
+    currentQuestion ++;
+  }  
+}  

@@ -1,12 +1,12 @@
 int currentQuestion;
-
+PImage img;
 
 
 void setup()
 {
 size(800,800);  
 background(0);
-  
+
 }  
 
 
@@ -64,7 +64,9 @@ void homePage()
 
 void Question1()
 {
+  keyPressed();
   
+  Question("Which of these is a capital?", '1');
   
   Button("Canberra",'a');
   Button("Sydney",'b');
@@ -75,7 +77,9 @@ void Question1()
 
 void Question2()
 {
+  keyPressed();
   
+  Question("How many letters are in the alphabet?", '1');
   
   Button("21",'a');
   Button("35",'b');
@@ -86,7 +90,9 @@ void Question2()
 
 void Question3()
 {
+  keyPressed();
   
+  Question("Which of these animals were killed in a zoo to save a human?", '1');
   
   Button("Nemo",'a');
   Button("Harambe",'b');
@@ -97,7 +103,9 @@ void Question3()
 
 void Question4()
 {
+  keyPressed();
   
+  Question("Which of these words is the same when spelt backwards?", '1');
   
   Button("Banana",'a');
   Button("Lol",'b');
@@ -108,13 +116,33 @@ void Question4()
 
 void Question5()
 {
+  keyPressed();
   
+  Question("Which of these is a song by Rihanna?", '1');
   
   Button("Baby",'a');
   Button("Diamonds",'b');
   Button("Closer",'c');
   Button("Hotline Bling",'d');
   
+}
+
+void Question6()
+{
+  fill(255);
+  textSize(60);
+  text("You Suck", 200, 200);
+  
+}
+
+void Question(String text, char option)
+{
+  if (option == '1')
+  {
+    fill(255);
+    textSize(20);
+    text(text, 75, 100, 640, 100);
+  }
 }
 
 void Button(String text, char option)
@@ -162,8 +190,25 @@ void Button(String text, char option)
 
 void keyPressed()
 {
-   if (mousePressed && mouseX>125 && mouseX<665 && mouseY>150 && mouseY<270)
+ 
+  if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=180 && mouseY<=260)
   {
     currentQuestion ++;
   }  
+  
+  else if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=320 && mouseY<=400)
+  {
+    currentQuestion ++;
+  }  
+  
+  else if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=460 && mouseY<=540)
+  {
+    currentQuestion ++;
+  }  
+  
+  else if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=600 && mouseY<=680)
+  {
+    currentQuestion ++;
+  }  
+
 }  

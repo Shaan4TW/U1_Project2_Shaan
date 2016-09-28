@@ -43,7 +43,11 @@ if (currentQuestion == 0)
  {
    Question5();
  }
- 
+
+ else if (currentQuestion == 6)
+ {
+   Question6();
+ }
 }
 
 
@@ -130,8 +134,8 @@ void Question5()
 void Question6()
 {
   fill(255);
-  textSize(60);
-  text("You Suck", 200, 200);
+  textSize(100);
+  text("You Suck", 200, 400);
   
 }
 
@@ -188,25 +192,25 @@ void Button(String text, char option)
   }
 }
 
-void keyPressed()
+void mousePressed()
 {
  
-  if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=180 && mouseY<=260)
+  if (mouseX>=125 && mouseX<=665 && mouseY>=180 && mouseY<=260)
   {
     currentQuestion ++;
   }  
   
-  else if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=320 && mouseY<=400)
+  else if (mouseX>=125 && mouseX<=665 && mouseY>=320 && mouseY<=400)
   {
     currentQuestion ++;
   }  
   
-  else if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=460 && mouseY<=540)
+  else if (mouseX>=125 && mouseX<=665 && mouseY>=460 && mouseY<=540)
   {
     currentQuestion ++;
   }  
   
-  else if (mousePressed && mouseX>=125 && mouseX<=665 && mouseY>=600 && mouseY<=680)
+  else if (mouseX>=125 && mouseX<=665 && mouseY>=600 && mouseY<=680)
   {
     currentQuestion ++;
   }  
